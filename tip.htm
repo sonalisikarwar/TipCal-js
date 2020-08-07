@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+</head>
+<style>
+    input.lop{
+        border-radius: 13px;
+        width: 150px;
+        height: 30px;
+    }
+    button{
+        background-color: lightblue;
+    }
+</style>
+<body>
+    <div class="output"></div>
+    <input type="number" value="100" class="lop">
+    <button type="button">Tip</button>
+
+    <script>
+        const button = document.querySelector('button');
+const output = document.querySelector('.output');
+
+button.addEventListener('click', function(){
+    const cost = document.querySelector('input');
+    let tip = (cost.value * .15).toFixed(2);
+    let temp = `<h1>You should tip $${tip} on $${cost.value} </h1>`;
+    output.innerHTML = temp;
+});
+    </script>    
+</body>
+</html>
